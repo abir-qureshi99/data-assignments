@@ -173,7 +173,9 @@ jobs:
         run: pip-audit || true
 
       - name: bandit
-        run: bandit -r submission/ -x submission/tests || true
+        run: bandit -r . -x tests || true
 
       - name: gitleaks
-        uses: gitleaks/gitleaks-action@v1.6.0
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
