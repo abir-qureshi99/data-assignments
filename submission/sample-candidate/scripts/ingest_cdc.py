@@ -72,7 +72,7 @@ def fetch_cdc_events():
             },
 
             "event_timestamp":
-                datetime.utcnow()
+                datetime.now()
         },
 
         {
@@ -102,7 +102,7 @@ def fetch_cdc_events():
             },
 
             "event_timestamp":
-                datetime.utcnow()
+                datetime.now()
         }
     ]
 
